@@ -1,0 +1,16 @@
+{
+  "cipher": [
+    {
+      "type": "box",
+      "kid": "test",
+      "keys": {
+        "senderPublicKey": "sendBoxPublic.pem",
+        "recipientPrivateKey": "boxPrivate.pem"
+      }
+    },
+    {
+      "type": "none",
+      "kid": "none"
+    }
+  ]
+}
