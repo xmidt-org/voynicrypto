@@ -18,11 +18,12 @@
 package voynicrypto
 
 import (
-	"github.com/Comcast/webpa-common/logging"
-	"github.com/stretchr/testify/assert"
-	"github.com/stretchr/testify/require"
 	"os"
 	"testing"
+
+	"github.com/stretchr/testify/assert"
+	"github.com/stretchr/testify/require"
+	"github.com/xmidt-org/webpa-common/logging"
 )
 
 func TestBasicCipherLoader(t *testing.T) {

@@ -24,10 +24,10 @@ import (
 	"encoding/pem"
 	"io/ioutil"
 
-	"github.com/Comcast/webpa-common/logging"
 	"github.com/go-kit/kit/log"
 	"github.com/goph/emperror"
 	"github.com/pkg/errors"
+	"github.com/xmidt-org/webpa-common/logging"
 )
 
 var (
