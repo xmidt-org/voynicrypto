@@ -2,11 +2,12 @@ package voynicrypto
 
 import (
 	"fmt"
-	"github.com/Comcast/webpa-common/logging"
-	"github.com/spf13/viper"
-	"github.com/stretchr/testify/assert"
 	"os"
 	"testing"
+
+	"github.com/spf13/viper"
+	"github.com/stretchr/testify/assert"
+	"github.com/xmidt-org/webpa-common/logging"
 )
 
 func TestViper(t *testing.T) {
