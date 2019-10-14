@@ -15,6 +15,17 @@ Voynicrypto provides helper functions to encrypt or decrypt.
 
 Voynicrypto provides helper functions to encrypt or decrypt.
 
+## Table of Contents
+
+- [Code of Conduct](#code-of-conduct)
+- [Install](#install)
+- [Contributing](#contributing)
+
+## Code of Conduct
+
+This project and everyone participating in it are governed by the [XMiDT Code Of Conduct](https://xmidt.io/code_of_conduct/). 
+By participating, you agree to this Code.
+
 ## Install
 This repo is a package.  There is no installation.
 
