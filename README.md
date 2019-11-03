@@ -13,7 +13,7 @@ Voynicrypto provides helper functions to encrypt or decrypt.
 
 ## Summary
 
-Voynicrypto provides helper functions to encrypt or decrypt.
+Voynicrypto provides helper functions to encrypt or decrypt. This package currently supports Box, RSA Symmetric, and RSA Asymmetric encryption and decryption.
 
 ## Table of Contents
 
