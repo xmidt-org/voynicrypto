@@ -6,6 +6,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 - Updated travis for automated github releases [#8](https://github.com/xmidt-org/voynicrypto/pull/7)
+- Updated references to the main branch [#11](https://github.com/xmidt-org/voynicrypto/pull/11)
 
 ## [v0.1.1]
 - Changed go-kit version
