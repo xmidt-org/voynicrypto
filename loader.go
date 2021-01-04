@@ -159,6 +159,7 @@ func GetPublicKey(loader KeyLoader) (*rsa.PublicKey, error) {
 }
 
 // LoadEncrypt uses the config to load an encrypter.
+//nolint:dupl // it's okay
 func (config *Config) LoadEncrypt() (Encrypt, error) {
 	var err error
 	if config.Logger == nil {
@@ -211,6 +212,7 @@ func (config *Config) LoadEncrypt() (Encrypt, error) {
 }
 
 // LoadDecrypt uses the config to load a decrypter.
+//nolint:dupl // it's okay
 func (config *Config) LoadDecrypt() (Decrypt, error) {
 	var err error
 	if config.Logger == nil {

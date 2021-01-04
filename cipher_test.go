@@ -20,10 +20,11 @@ package voynicrypto
 import (
 	"crypto"
 	"crypto/rand"
+	"testing"
+
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 	"golang.org/x/crypto/nacl/box"
-	"testing"
 )
 
 func TestBasicCrypt(t *testing.T) {
@@ -75,7 +76,7 @@ func testCryptoPair(t *testing.T, encrypter Encrypt, decrypter Decrypt, errOnLar
 			" glass orbs, a Grim knitted hats. Stan Shunpike doe patronus, suck his soul Muggle-Born large order of drills" +
 			" the trace. Bred in captivity fell through the veil, quaffle blue flame ickle diddykins Aragog. Yer a wizard," +
 			" Harry Doxycide the woes of Mrs. Weasley Goblet of Fire." +
-			"refect’s bathroom Trelawney veela squashy armchairs, SPEW: Gamp’s Elemental Law of Transfiguration. Magic" +
+			"prefect’s bathroom Trelawney veela squashy armchairs, SPEW: Gamp’s Elemental Law of Transfiguration. Magic" +
 			" Nagini bezoar, Hippogriffs Headless Hunt giant squid petrified. Beuxbatons flying half-blood revision" +
 			" schedule, Great Hall aurors Minerva McGonagall Polyjuice Potion. Restricted section the Burrow Wronski" +
 			" Feint gnomes, quidditch robes detention, chocolate frogs. Errol parchment knickerbocker glory Avada" +
@@ -91,16 +92,16 @@ func testCryptoPair(t *testing.T, encrypter Encrypt, decrypter Decrypt, errOnLar
 			message := []byte(tc.str)
 			encodedMSG, nonce, err := encrypter.EncryptMessage(message)
 			if !errOnLarge {
-				require.NoError(err)
+				require.Nil(err)
 			} else if err != nil {
 				return
 			}
-			assert.NoError(err)
+			assert.Nil(err)
 			assert.NotEmpty(encodedMSG)
 
 			msg, err := decrypter.DecryptMessage(encodedMSG, nonce)
 
-			assert.NoError(err)
+			assert.Nil(err)
 			assert.Equal(message, msg)
 		})
 	}
@@ -110,10 +111,10 @@ func TestBoxCipher(t *testing.T) {
 	require := require.New(t)
 
 	senderPublicKey, senderPrivateKey, err := box.GenerateKey(rand.Reader)
-	require.NoError(err)
+	require.Nil(err)
 
 	recipientPublicKey, recipientPrivateKey, err := box.GenerateKey(rand.Reader)
-	require.NoError(err)
+	require.Nil(err)
 	require.NotEqual(recipientPublicKey, senderPublicKey)
 
 	encrypter := NewBoxEncrypter(*senderPrivateKey, *recipientPublicKey, "")
