@@ -7,6 +7,7 @@ import (
 
 	"github.com/spf13/viper"
 	"github.com/stretchr/testify/assert"
+	"github.com/stretchr/testify/require"
 	"github.com/xmidt-org/webpa-common/logging"
 )
 
@@ -38,6 +39,7 @@ func TestViper(t *testing.T) {
 
 func TestNOOPViper(t *testing.T) {
 	assert := assert.New(t)
+	require := require.New(t)
 
 	v := viper.New()
 	path, err := os.Getwd()
@@ -50,9 +52,11 @@ func TestNOOPViper(t *testing.T) {
 	}
 
 	options, err := FromViper(v)
-	assert.Nil(err)
+	require.Nil(err)
 
 	encrypter, err := options.GetEncrypter(logging.NewTestLogger(nil, t))
+	require.Nil(err)
+	require.NotNil(encrypter)
 
 	msg := "hello"
 	data, _, err := encrypter.EncryptMessage([]byte(msg))
