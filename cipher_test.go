@@ -76,7 +76,7 @@ func testCryptoPair(t *testing.T, encrypter Encrypt, decrypter Decrypt, errOnLar
 			" glass orbs, a Grim knitted hats. Stan Shunpike doe patronus, suck his soul Muggle-Born large order of drills" +
 			" the trace. Bred in captivity fell through the veil, quaffle blue flame ickle diddykins Aragog. Yer a wizard," +
 			" Harry Doxycide the woes of Mrs. Weasley Goblet of Fire." +
-			"refect’s bathroom Trelawney veela squashy armchairs, SPEW: Gamp’s Elemental Law of Transfiguration. Magic" +
+			"prefect’s bathroom Trelawney veela squashy armchairs, SPEW: Gamp’s Elemental Law of Transfiguration. Magic" +
 			" Nagini bezoar, Hippogriffs Headless Hunt giant squid petrified. Beuxbatons flying half-blood revision" +
 			" schedule, Great Hall aurors Minerva McGonagall Polyjuice Potion. Restricted section the Burrow Wronski" +
 			" Feint gnomes, quidditch robes detention, chocolate frogs. Errol parchment knickerbocker glory Avada" +
