@@ -30,7 +30,7 @@ func TestBasicCipherLoader(t *testing.T) {
 	assert := assert.New(t)
 
 	dir, err := os.Getwd()
-	assert.NoError(err)
+	assert.Nil(err)
 
 	encrypter, err := (&RSALoader{
 		Hash: &BasicHashLoader{HashName: "SHA512"},
@@ -42,7 +42,7 @@ func TestBasicCipherLoader(t *testing.T) {
 		},
 	}).LoadEncrypt()
 	assert.NotEmpty(encrypter)
-	assert.NoError(err)
+	assert.Nil(err)
 
 	decrypter, err := (&RSALoader{
 		Hash: &BasicHashLoader{HashName: "SHA512"},
@@ -54,16 +54,16 @@ func TestBasicCipherLoader(t *testing.T) {
 		},
 	}).LoadDecrypt()
 	assert.NotEmpty(decrypter)
-	assert.NoError(err)
+	assert.Nil(err)
 
 	message := []byte("Hello World")
 
 	encodedMSG, nonce, err := encrypter.EncryptMessage(message)
-	assert.NoError(err)
+	assert.Nil(err)
 	assert.NotEmpty(encodedMSG)
 
 	msg, err := decrypter.DecryptMessage(encodedMSG, nonce)
-	assert.NoError(err)
+	assert.Nil(err)
 	assert.Equal(message, msg)
 }
 
@@ -71,7 +71,7 @@ func TestLoadOptions(t *testing.T) {
 	require := require.New(t)
 
 	dir, err := os.Getwd()
-	require.NoError(err)
+	require.Nil(err)
 
 	testData := []struct {
 		description string
@@ -115,10 +115,10 @@ func testOptions(t *testing.T, c Config, errOnLarge bool) {
 	require := require.New(t)
 
 	encrypter, err := c.LoadEncrypt()
-	require.NoError(err)
+	require.Nil(err)
 
 	decrypter, err := c.LoadDecrypt()
-	require.NoError(err)
+	require.Nil(err)
 
 	testCryptoPair(t, encrypter, decrypter, errOnLarge)
 }

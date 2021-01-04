@@ -15,7 +15,7 @@ func TestViper(t *testing.T) {
 
 	v := viper.New()
 	path, err := os.Getwd()
-	assert.NoError(err)
+	assert.Nil(err)
 	v.AddConfigPath(path)
 	v.SetConfigName("example")
 
@@ -24,15 +24,15 @@ func TestViper(t *testing.T) {
 	}
 
 	options, err := FromViper(v)
-	assert.NoError(err)
+	assert.Nil(err)
 
 	encrypter, err := options.GetEncrypter(logging.NewTestLogger(nil, t))
-	assert.NoError(err)
+	assert.Nil(err)
 	assert.NotNil(encrypter)
 
 	msg := "hello"
 	data, _, err := encrypter.EncryptMessage([]byte(msg))
-	assert.NoError(err)
+	assert.Nil(err)
 	assert.NotEqual([]byte(msg), data)
 }
 
@@ -41,7 +41,7 @@ func TestNOOPViper(t *testing.T) {
 
 	v := viper.New()
 	path, err := os.Getwd()
-	assert.NoError(err)
+	assert.Nil(err)
 	v.AddConfigPath(path)
 	v.SetConfigName("noop")
 
@@ -50,13 +50,13 @@ func TestNOOPViper(t *testing.T) {
 	}
 
 	options, err := FromViper(v)
-	assert.NoError(err)
+	assert.Nil(err)
 
 	encrypter, err := options.GetEncrypter(logging.NewTestLogger(nil, t))
 
 	msg := "hello"
 	data, _, err := encrypter.EncryptMessage([]byte(msg))
-	assert.NoError(err)
+	assert.Nil(err)
 	assert.Equal([]byte(msg), data)
 }
 
@@ -65,7 +65,7 @@ func TestBoxBothSides(t *testing.T) {
 
 	vSend := viper.New()
 	path, err := os.Getwd()
-	assert.NoError(err)
+	assert.Nil(err)
 	vSend.AddConfigPath(path)
 	vSend.SetConfigName("boxSender")
 	if err := vSend.ReadInConfig(); err != nil {
@@ -73,13 +73,13 @@ func TestBoxBothSides(t *testing.T) {
 	}
 
 	options, err := FromViper(vSend)
-	assert.NoError(err)
+	assert.Nil(err)
 
 	encrypter, err := options.GetEncrypter(logging.NewTestLogger(nil, t))
-	assert.NoError(err)
+	assert.Nil(err)
 
 	vRec := viper.New()
-	assert.NoError(err)
+	assert.Nil(err)
 	vRec.AddConfigPath(path)
 	vRec.SetConfigName("boxRecipient")
 	if err := vRec.ReadInConfig(); err != nil {
@@ -87,19 +87,19 @@ func TestBoxBothSides(t *testing.T) {
 	}
 
 	options, err = FromViper(vRec)
-	assert.NoError(err)
+	assert.Nil(err)
 
 	decrypters := PopulateCiphers(options, logging.NewTestLogger(nil, t))
 
-	assert.NoError(err)
+	assert.Nil(err)
 
 	msg := []byte("hello")
 	data, nonce, err := encrypter.EncryptMessage(msg)
-	assert.NoError(err)
+	assert.Nil(err)
 
 	if decrypter, ok := decrypters.Get(encrypter.GetAlgorithm(), encrypter.GetKID()); ok {
 		decodedMSG, err := decrypter.DecryptMessage(data, nonce)
-		assert.NoError(err)
+		assert.Nil(err)
 
 		assert.Equal(msg, decodedMSG)
 	} else {
@@ -112,7 +112,7 @@ func TestGetDecrypterErr(t *testing.T) {
 
 	vSend := viper.New()
 	path, err := os.Getwd()
-	assert.NoError(err)
+	assert.Nil(err)
 	vSend.AddConfigPath(path)
 	vSend.SetConfigName("boxRecipient")
 	if err := vSend.ReadInConfig(); err != nil {
@@ -120,7 +120,7 @@ func TestGetDecrypterErr(t *testing.T) {
 	}
 
 	options, err := FromViper(vSend)
-	assert.NoError(err)
+	assert.Nil(err)
 
 	decrypters := PopulateCiphers(options, logging.NewTestLogger(nil, t))
 	fmt.Printf("%#v\n", decrypters)
