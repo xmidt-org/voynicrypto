@@ -10,5 +10,5 @@ require (
 	github.com/spf13/viper v1.12.0
 	github.com/stretchr/testify v1.10.0
 	github.com/xmidt-org/webpa-common v1.11.9
-	golang.org/x/crypto v0.31.0
+	golang.org/x/crypto v0.32.0
 )
