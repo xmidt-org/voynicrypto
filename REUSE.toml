@@ -1,0 +1,125 @@
+version = 1
+SPDX-PackageName = "voynicrypto"
+SPDX-PackageSupplier = "John Bass <john_bass2@cable.comcast.com>"
+SPDX-PackageDownloadLocation = "https://github.com/xmidt-org/voynicrypto"
+
+[[annotations]]
+path = "NOTICE"
+precedence = "aggregate"
+SPDX-FileCopyrightText = "SPDX-FileCopyrightText: 2025 Comcast Cable Communications Management, LLC"
+SPDX-License-Identifier = "Apache-2.0"
+
+[[annotations]]
+path = ".gitignore"
+precedence = "aggregate"
+SPDX-FileCopyrightText = "SPDX-FileCopyrightText: 2025 Comcast Cable Communications Management, LLC"
+SPDX-License-Identifier = "Apache-2.0"
+
+[[annotations]]
+path = ".whitesource"
+precedence = "aggregate"
+SPDX-FileCopyrightText = "SPDX-FileCopyrightText: 2025 Comcast Cable Communications Management, LLC"
+SPDX-License-Identifier = "Apache-2.0"
+
+[[annotations]]
+path = "CONTRIBUTING.md"
+precedence = "aggregate"
+SPDX-FileCopyrightText = "SPDX-FileCopyrightText: 2025 Comcast Cable Communications Management, LLC"
+SPDX-License-Identifier = "Apache-2.0"
+
+[[annotations]]
+path = "MAINTAINERS.md"
+precedence = "aggregate"
+SPDX-FileCopyrightText = "SPDX-FileCopyrightText: 2025 Comcast Cable Communications Management, LLC"
+SPDX-License-Identifier = "Apache-2.0"
+
+[[annotations]]
+path = "README.md"
+precedence = "aggregate"
+SPDX-FileCopyrightText = "SPDX-FileCopyrightText: 2025 Comcast Cable Communications Management, LLC"
+SPDX-License-Identifier = "Apache-2.0"
+
+[[annotations]]
+path = "go.mod"
+precedence = "aggregate"
+SPDX-FileCopyrightText = "SPDX-FileCopyrightText: 2025 Comcast Cable Communications Management, LLC"
+SPDX-License-Identifier = "Apache-2.0"
+
+[[annotations]]
+path = "go.sum"
+precedence = "aggregate"
+SPDX-FileCopyrightText = "SPDX-FileCopyrightText: 2025 Comcast Cable Communications Management, LLC"
+SPDX-License-Identifier = "Apache-2.0"
+
+[[annotations]]
+path = "CHANGELOG.md"
+precedence = "aggregate"
+SPDX-FileCopyrightText = "SPDX-FileCopyrightText: 2025 Comcast Cable Communications Management, LLC"
+SPDX-License-Identifier = "Apache-2.0"
+
+
+[[annotations]]
+path = "sendBoxPrivate.pem"
+precedence = "aggregate"
+SPDX-FileCopyrightText = "SPDX-FileCopyrightText: 2025 Comcast Cable Communications Management, LLC"
+SPDX-License-Identifier = "Apache-2.0"
+
+[[annotations]]
+path = "sendBoxPublic.pem"
+precedence = "aggregate"
+SPDX-FileCopyrightText = "SPDX-FileCopyrightText: 2025 Comcast Cable Communications Management, LLC"
+SPDX-License-Identifier = "Apache-2.0"
+
+[[annotations]]
+path = "private.pem"
+precedence = "aggregate"
+SPDX-FileCopyrightText = "SPDX-FileCopyrightText: 2025 Comcast Cable Communications Management, LLC"
+SPDX-License-Identifier = "Apache-2.0"
+
+[[annotations]]
+path = "public.pem"
+precedence = "aggregate"
+SPDX-FileCopyrightText = "SPDX-FileCopyrightText: 2025 Comcast Cable Communications Management, LLC"
+SPDX-License-Identifier = "Apache-2.0"
+
+[[annotations]]
+path = "tool/private.pem"
+precedence = "aggregate"
+SPDX-FileCopyrightText = "SPDX-FileCopyrightText: 2025 Comcast Cable Communications Management, LLC"
+SPDX-License-Identifier = "Apache-2.0"
+
+[[annotations]]
+path = "tool/public.pem"
+precedence = "aggregate"
+SPDX-FileCopyrightText = "SPDX-FileCopyrightText: 2025 Comcast Cable Communications Management, LLC"
+SPDX-License-Identifier = "Apache-2.0"
+
+[[annotations]]
+path = "boxPublic.pem"
+precedence = "aggregate"
+SPDX-FileCopyrightText = "SPDX-FileCopyrightText: 2025 Comcast Cable Communications Management, LLC"
+SPDX-License-Identifier = "Apache-2.0"
+
+[[annotations]]
+path = "boxPrivate.pem"
+precedence = "aggregate"
+SPDX-FileCopyrightText = "SPDX-FileCopyrightText: 2025 Comcast Cable Communications Management, LLC"
+SPDX-License-Identifier = "Apache-2.0"
+
+[[annotations]]
+path = "boxRecipient.json"
+precedence = "aggregate"
+SPDX-FileCopyrightText = "SPDX-FileCopyrightText: 2025 Comcast Cable Communications Management, LLC"
+SPDX-License-Identifier = "Apache-2.0"
+
+[[annotations]]
+path = "boxSender.json"
+precedence = "aggregate"
+SPDX-FileCopyrightText = "SPDX-FileCopyrightText: 2025 Comcast Cable Communications Management, LLC"
+SPDX-License-Identifier = "Apache-2.0"
+
+[[annotations]]
+path = "example.json"
+precedence = "aggregate"
+SPDX-FileCopyrightText = "SPDX-FileCopyrightText: 2025 Comcast Cable Communications Management, LLC"
+SPDX-License-Identifier = "Apache-2.0"
